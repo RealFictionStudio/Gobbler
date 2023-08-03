@@ -62,7 +62,8 @@ func main() {
 	checkIfError(err)
 
 	var dirs []string = strings.Split(cwd, sep)
-	os.Chdir(strings.Join(dirs[:len(dirs)-1], sep) + sep + "src")
+	err = os.Chdir(strings.Join(dirs, sep) + sep + "src")
+	checkIfError(err)
 	cwd, err = os.Getwd()
 	checkIfError(err)
 

@@ -22,4 +22,4 @@ go.work
 
 src/test
 src/.env
-src/sended.log
+src/*.log
